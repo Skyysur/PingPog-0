@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Isaiah's Ping Pong</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="brand">
+        <div>
+          <h1>Isaiah's Ping Pong</h1>
+          <p class="muted">Player 1: W/S • Player 2: ↑/↓ • Space: start/pause • R: reset</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="game-panel">
+        <div class="hud">
+          <div class="score"><span id="p1-score">0</span> — <span id="p2-score">0</span></div>
+          <div class="controls">
+            <button id="start-btn" class="btn">Start</button>
+            <button id="pause-btn" class="btn secondary">Pause</button>
+            <button id="reset-btn" class="btn danger">Reset</button>
+            <button id="fs-btn" class="btn secondary" aria-label="Toggle Fullscreen">Fullscreen</button>
+          </div>
+        </div>
+        <canvas id="game" width="800" height="500" aria-label="Two-player pong game"></canvas>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="muted">Local two-player on one keyboard. Have fun!</span>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+  </html>

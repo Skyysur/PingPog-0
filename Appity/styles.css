@@ -1,0 +1,26 @@
+:root { --bg:#0b1220; --panel:#0f172a; --text:#e2e8f0; --muted:#94a3b8; --border:#1f2937; --brand:#22c55e; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin:0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+
+.header { background: var(--panel); border-bottom: 1px solid var(--border); }
+.brand { max-width: 1000px; margin: 0 auto; padding: 20px 24px; display:flex; align-items:center; gap: 12px; }
+.logo { width: 36px; height: 36px; border-radius: 8px; display:grid; place-items:center; color:#052e1a; background: linear-gradient(135deg, var(--brand), #3b82f6); }
+.brand h1 { margin: 0; font-size: 22px; }
+.muted { color: var(--muted); }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 24px; }
+.game-panel { background: var(--panel); border:1px solid var(--border); border-radius: 14px; padding: 16px; }
+.hud { display:flex; align-items:center; justify-content: space-between; margin-bottom: 12px; }
+.score { font-size: 28px; font-weight: 700; letter-spacing: 2px; }
+.controls { display:flex; gap: 8px; }
+.btn { background: var(--brand); border: none; color: #052e1a; padding: 8px 12px; border-radius: 8px; cursor:pointer; font-weight:600; }
+.btn.secondary { background: #38bdf8; color: #052e1a; }
+.btn.danger { background: #ef4444; color: #1b0b0b; }
+.btn:hover { filter: brightness(1.05); }
+
+canvas#game { width: 100%; max-width: none; height: auto; border: 1px solid var(--border); background: #0a0f1a; border-radius: 10px; display:block; margin: 0 auto; }
+
+.footer { text-align:center; color: var(--muted); padding: 18px; }
+
+@media (max-width: 860px) { .hud { flex-direction: column; gap: 10px; } }
